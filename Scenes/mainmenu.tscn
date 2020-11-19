@@ -1,44 +1,45 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/ExitGame.gd" type="Script" id=2]
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="StyleBoxEmpty" id=7]
-
-[sub_resource type="DynamicFontData" id=9]
+[sub_resource type="DynamicFontData" id=6]
 font_path = "res://Fonts/Arcade2020.ttf"
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=7]
 size = 60
-font_data = SubResource( 9 )
+font_data = SubResource( 6 )
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id=8]
 
-[sub_resource type="StyleBoxEmpty" id=13]
+[sub_resource type="StyleBoxEmpty" id=9]
 
-[sub_resource type="StyleBoxEmpty" id=17]
+[sub_resource type="StyleBoxEmpty" id=10]
 
-[sub_resource type="DynamicFontData" id=15]
+[sub_resource type="DynamicFontData" id=11]
 font_path = "res://Fonts/Arcade2020.ttf"
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=12]
 size = 17
-font_data = SubResource( 15 )
+font_data = SubResource( 11 )
 
-[sub_resource type="CanvasItemMaterial" id=18]
+[sub_resource type="CanvasItemMaterial" id=13]
 
-[sub_resource type="Shader" id=19]
+[sub_resource type="Shader" id=14]
 
-[sub_resource type="ShaderMaterial" id=20]
-next_pass = SubResource( 18 )
-shader = SubResource( 19 )
+[sub_resource type="ShaderMaterial" id=15]
+next_pass = SubResource( 13 )
+shader = SubResource( 14 )
 
 [node name="Node2D" type="Node2D"]
 
@@ -46,11 +47,11 @@ shader = SubResource( 19 )
 margin_top = 110.0
 margin_right = 1025.0
 margin_bottom = 170.0
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 0.196078 )
@@ -62,7 +63,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="PlayBtn"]
 margin_right = 1025.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 7 )
 text = "Play"
 align = 1
 valign = 1
@@ -74,11 +75,11 @@ __meta__ = {
 margin_top = 180.0
 margin_right = 1025.0
 margin_bottom = 240.0
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 0.196078 )
@@ -90,7 +91,7 @@ __meta__ = {
 [node name="Label2" type="Label" parent="ProgressBtn"]
 margin_right = 1025.0
 margin_bottom = 57.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 7 )
 text = "Progress"
 align = 1
 valign = 1
@@ -102,11 +103,11 @@ __meta__ = {
 margin_top = 250.0
 margin_right = 1025.0
 margin_bottom = 310.0
-custom_styles/hover = SubResource( 13 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 0.196078 )
@@ -118,7 +119,7 @@ __meta__ = {
 [node name="Label3" type="Label" parent="OptionsBtn"]
 margin_right = 1025.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 7 )
 text = "Options"
 align = 1
 valign = 1
@@ -127,26 +128,30 @@ __meta__ = {
 }
 
 [node name="ExitBtn" type="Button" parent="."]
+margin_left = 432.0
 margin_top = 320.0
-margin_right = 1025.0
+margin_right = 592.0
 margin_bottom = 383.0
-custom_styles/hover = SubResource( 17 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 0 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 0.196078 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label4" type="Label" parent="ExitBtn"]
-margin_right = 1025.0
-margin_bottom = 60.0
-custom_fonts/font = SubResource( 10 )
+margin_left = -432.0
+margin_top = 8.0
+margin_right = 593.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 7 )
 text = "Exit"
 align = 1
 valign = 1
@@ -159,14 +164,11 @@ margin_left = 837.613
 margin_top = 582.702
 margin_right = 1097.61
 margin_bottom = 715.702
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 12 )
 text = "Non-Copyright Ssr"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 87.0604, -83.0737 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -176,7 +178,7 @@ position = Vector2( 87.0604, -83.0737 )
 
 [node name="bg" type="Sprite" parent="."]
 modulate = Color( 0.223529, 0.223529, 0.223529, 1 )
-material = SubResource( 20 )
+material = SubResource( 15 )
 position = Vector2( 607.343, 300.324 )
 scale = Vector2( 0.791171, 0.779689 )
 z_index = -1
